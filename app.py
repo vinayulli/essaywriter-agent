@@ -107,10 +107,10 @@ st.header("Enter the topic")
 topic = st.text_input("Enter the topic details","")
 enter_btn = st.button("Enter")
 
-tavily_key = st.sidebar.text_input("Enter tavily api key:")
+#tavily_key = st.sidebar.text_input("Enter tavily api key:")
 openai_key = st.sidebar.text_input("Enter openai api key:")
 
-if enter_btn and tavily_key and openai_key:
+if enter_btn and openai_key:
     tavily = TavilyClient(api_key="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")
     model = ChatOpenAI(model="gpt-4o-mini-2024-07-18",temperature=0.5, openai_api_key=openai_key)
     print("invoking the graph")
